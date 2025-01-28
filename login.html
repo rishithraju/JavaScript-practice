@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            /* Gradient Background */
+            background: linear-gradient(to bottom right, #2980b9, #8e44ad); /* Example gradient */
+            /* Or for a more subtle effect: */
+            /* background: linear-gradient(to bottom, #e0eafc, #cfdef3); */
+            background-attachment: fixed; /* Prevents background from moving on scroll */
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+            width: 300px;
+        }
+
+        /* ... (rest of the CSS remains the same) */
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333; /* Darker heading color */
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555; /* Slightly darker label color */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 12px); /* Account for padding */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff; /* Blue button */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+            <div class="error-message" id="error"></div>
+        </form>
+    </div>
+    <script>
+    //This is a placeholder for actual login logic. You would usually use JavaScript to send the form data to a server for authentication.
+        const form = document.querySelector('form');
+        const errorDiv = document.getElementById('error');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent form from actually submitting
+           const username = form.username.value;
+           const password = form.password.value;
+           if(username == "" || password == ""){
+                errorDiv.textContent = "Please fill all the inputs";
+           }else{
+            errorDiv.textContent = "";
+            alert("Login successfull");
+           }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<style>
+    button{
+        color: red;
+        position: absolute;
+            top:248px;
+            left:200px;
+            width:25%;
+    }
+</style>
+<body>
+    <button>Clicked!</button>
+    <script>
+    const btn = document.querySelector("button")
+    function varma() {
+        console.log("Mouse Leave");
+    }
+
+    function varma1(event){
+        console.log(event.target,"Enter!");
+        
+    }
+    btn.addEventListener("mouseleave", varma)
+    btn.addEventListener("mouseenter",varma1)
+    btn.addEventListener("click",varma1)
+    </script>
+</body>
+</html>
