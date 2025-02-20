@@ -7,7 +7,7 @@ if (a > b) {
 } else if (c > b) {
   console.log("c is big");
 } else {
-  console.log("b is big");
+ console.log("b is big");
 }
 
 switch (b) {

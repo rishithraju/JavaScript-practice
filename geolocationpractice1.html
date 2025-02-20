@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geo location</title>
+</head>
+<body>
+    <button>location clicked!</button>
+    <script>
+
+        const variable = document.querySelector("button")
+        function local(){
+            navigator.geolocation.getCurrentPosition((success)=>{
+                console.log(success);
+                
+            },(error)=>{
+                console.log(error);
+                
+            })
+        }
+         variable.addEventListener("click",local);
+    </script>
+</body>
+</html>

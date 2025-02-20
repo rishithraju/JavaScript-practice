@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo Tracker</title>
+</head>
+<body>
+    <button>Clicked!</button>
+    <script>
+        const btn = document.querySelector("button")
+        function navigatorlocation(){
+            navigator.geolocation.getCurrentPosition((success)=>{
+                console.log(success);
+                
+
+            },(Error)=>{
+                    console.log(Error);
+                    
+            });
+        };
+        btn.addEventListener("click",navigatorlocation);
+
+    </script>
+</body>
+</html>

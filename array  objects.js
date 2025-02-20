@@ -40,6 +40,7 @@ const m = {
   color: "red",
   price: "90k",
 };
+
 const y = Object.assign({}, m); //Object.assign() - it assignes the object elements into the Empty Object
 console.log(y); //take the empty object
 

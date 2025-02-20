@@ -14,9 +14,6 @@ class child extends parent {
     this.country = country;
   }
 }
-for(i = 0; i<11; i++){
-    let info = new child("Varma","A.P",524126,"South","Tirupathi","India")
-    console.log(info);
-    
-}
+let info = new child("Varma","A.P",524126,"South","Tirupathi","India")
+console.log(info);
  

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+    <style>
+        form{
+            text-align: center;
+
+        }
+        button{
+            text-align: center;
+            color: blue;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+    <label>name:</label>
+    <input type="text" name="name" placeholder="Enter your name"/> <br><br>
+    <label>email:</label>
+    <input type="email" name="email" placeholder="Enter your email"/><br><br>
+    <label>Ph.No:</label>
+    <input type="number" name="ph.no" placeholder="Enter your phone number"><br><br>
+    </form>
+
+    <button>Geo Location Clicked!</button>
+    <script>
+        const variable = document.querySelector("button")
+        function jiosim(){
+            navigator.geolocation.getCurrentPosition((Success)=>{
+                console.log(Success);
+                
+            },(Error)=>{
+                console.log(Error);
+                
+            })
+        }
+
+        function mousehandler(){
+            console.log("Mouse Enter");
+            
+        }
+
+        function mousehandler1(){
+            console.log("Mouse Leave!");
+            
+        }
+
+        function mousehandler2(){
+            console.log("Mouse Move!");
+            
+        }
+
+        function key(){
+            console.log("Key Performs!");
+            
+        }
+         
+        variable.addEventListener("keypress",key)
+        variable.addEventListener("mouseenter",mousehandler)
+
+        variable.addEventListener("click",jiosim)
+
+        variable.addEventListener("mouseleave",mousehandler1)
+        
+        variable.addEventListener("mousemove",mousehandler2)
+    </script>
+</body>
+</html>

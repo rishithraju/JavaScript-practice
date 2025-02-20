@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <button>Geo Location Clicked!</button>
+    <script>
+        const location1 = document.querySelector("button")
+        function trachhandler(){
+            navigator.geolocation.getCurrentPosition((posdata)=>{
+                setTimeout(()=>{
+                     console.log(posdata);
+                },3000)
+            }), (err)=>{
+                console.log(error);
+            }
+            setTimeout(()=>{
+                console.log("Timer Done!");
+                
+            },0)
+            console.log("Getting Position....");
+        }
+        location1.addEventListener("click",trachhandler)
+    </script>
+</body>
+</html>

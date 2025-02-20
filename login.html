@@ -27,7 +27,7 @@
             width: 300px;
         }
 
-        /* ... (rest of the CSS remains the same) */
+       
 
         .login-container h2 {
             text-align: center;
@@ -98,12 +98,14 @@
         const form = document.querySelector('form');
         const errorDiv = document.getElementById('error');
         form.addEventListener('submit', (event) => {
-            event.preventDefault(); // Prevent form from actually submitting
+            event.preventDefault(); 
+                                           // Prevent form from actually submitting
            const username = form.username.value;
            const password = form.password.value;
            if(username == "" || password == ""){
                 errorDiv.textContent = "Please fill all the inputs";
-           }else{
+           }
+           else{
             errorDiv.textContent = "";
             alert("Login successfull");
            }

@@ -35,3 +35,4 @@ Non-primitive datatypes
 5.map
 6.date
 */
+const variable = "big int and values anre defined as possible function" 

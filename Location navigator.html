@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator.geolocation.getCurrentPosition((=>{},))</title>
+</head>
+<body>
+    <button>Navigating The Geo location!</button>
+     <script>
+          const btn = document.querySelector("button");
+          function location1(){
+            navigator.geolocation.getCurrentPosition((Success)=>{
+                console.log(Success);
+                
+            },(Error)=>{
+                   console.log(Error);
+            })
+          }
+          btn.addEventListener("click",location1)
+          
+     </script>
+</body>
+</html>
