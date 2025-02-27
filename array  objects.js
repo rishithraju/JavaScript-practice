@@ -21,13 +21,13 @@ const car2 = {
   fuel: "78L",
 };
 
-console.log(car2.hasOwnProperty("price")); // hasOwnProperty() - true or false
+console.log(car2.hasOwnProperty("price"));  // hasOwnProperty() - true or false
 
-console.log(Object.values(car2)); //Object.values(car2) - Converts Obj to Arrays
+console.log(Object.values(car2));  //Object.values(car2) - Converts Obj to Arrays
 
-console.log(Object.keys(car2)); //Object.keys(car2) - Converts Obj to Arrays
+console.log(Object.keys(car2));  //Object.keys(car2) - Converts Obj to Arrays
 
-console.log(Object.entries(car2)); //Object.entries(car2) - Converts to Nested Arrays
+console.log(Object.entries(car2));  //Object.entries(car2) - Converts to Nested Arrays
 
 const a = {
   brand: "apple",

@@ -1,5 +1,5 @@
 class Parent {
-  constructor(name, year, village, district, country) {
+  constructor(name, year, village, district, country){
     this.Fullname = name;
     this.Year = year;
     this.Village = village;
@@ -8,6 +8,7 @@ class Parent {
   
   }
 }
+
 class child extends Parent{
   constructor(name,year,village,district,state,country,address){
     super(name,year,village,district,country)

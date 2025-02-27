@@ -11,10 +11,8 @@
         const btn = document.querySelector("button")
         function navigatorlocation(){
             navigator.geolocation.getCurrentPosition((success)=>{
-                console.log(success);
-                
-
-            }, (Error)=>{
+                console.log(success)
+            },(Error)=>{
                     console.log(Error);
                     
             });
