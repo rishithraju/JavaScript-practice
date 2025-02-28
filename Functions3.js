@@ -1,5 +1,4 @@
 function name1(){
-    console.log("pass the Test");
-    
+    console.log("Pass the Test!");
 }
 name1()

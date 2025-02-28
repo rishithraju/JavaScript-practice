@@ -4,21 +4,20 @@ class Parent {
     this.Year = year;
     this.Village = village;
     this.District = district;
-    this.country = country
+    this.country = country;
   
   }
 }
 
 class child extends Parent{
   constructor(name,year,village,district,state,country,address){
-    super(name,year,village,district,country)
-    this.state = state
-    this.address = address
-    
+    super(name,year,village,district,country);
+    this.state = state;
+    this.address = address;
   }
 }
 
- let varma = new child("Rishith Varma", 22, "Naidupeta", "Tirupathi", "A.p","India","Btmlayout");
- console.log(varma);
+let varma = new child("Rishith Varma", 22, "Naidupeta", "Tirupathi", "A.p","India","Btmlayout");
+console.log(varma);
  
  
