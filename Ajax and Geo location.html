@@ -8,54 +8,52 @@
 <body>
     <button>Geo Location Was Clicked!</button>
     <script>
-// AJAX - Asynchronous javascript and XML
-// Synchronous This is
-// console.log("A");
+        // AJAX - Asynchronous JavaScript and XML
+        console.log("A");
+        setTimeout(()=>{
+            console.log("B");    
+        }, 0);
 
-// setTimeout(()=>{
-//     console.log("B");    
-// },0)
+        console.log("C");
 
-// console.log("C");
+        // Geo Location
+        // We need to give 2 callback functions using arrow function
+        const btn = document.querySelector("button");
 
-// Geo Location    
-//                   we need to give 2 call back functions using arrowfunction
+        function trackHandler() {
+            // Here navigator.geolocation is an object, .getCurrentPosition is a method
+            // x and y are the parameters we need to pass
+            navigator.geolocation.getCurrentPosition((x) => {
+                setTimeout(() => {
+                    console.log(x);
+                }, 2000);
+            }, (y) => {
+                console.log(y);
+            });
+        }
 
-// const btn = document.querySelector("button")
-//  function trackhandler(){ // Here navigator.geolocation is an object,.getCurrentPosition is a Method // x and y is the parameters we need to pass
-//     navigator.geolocation.getCurrentPosition((x)=>{
-//         setTimeout(()=>{
-//             console.log(x);
-//         },2000)
-//     },(y)=>{
-//         console.log(y);
-//     })
-// }
-// btn.addEventListener("click",trackhandler)
+        btn.addEventListener("click", trackHandler);
 
-// promises - An object used as a placeholder for future asynchronous result.
- 
- //new we need to take like object using new,,,Promise is a in-built method
-const btn = document.querySelector("button")
-const btn1 = new Object((success, reject)=>{  //executable functions 2 functions
-    navigator.geolocation.getCurrentPosition((x)=>{
-        success(x)
-    },(y)=>{
-       reject(y)
-    })   
-}) 
-function handler(){
-    promise().then((x)=>{
-        console.log(y);
+        // Promises - An object used as a placeholder for future asynchronous results
+        function getGeoLocation() {
+            return new Promise((resolve, reject) => {
+                navigator.geolocation.getCurrentPosition((x) => {
+                    resolve(x);
+                }, (y) => {
+                    reject(y);
+                });
+            });
+        }
 
-    }).catch((y)=>{
-       console.log(y);
-    })
-}
-btn.addEventListener("click",handler)
-
-
-
-    </script> 
+        function handler() {
+            getGeoLocation().then((x) => {
+                console.log(x);
+            }).catch((y) => {
+                console.log(y);
+            });
+        }
+        
+        btn.addEventListener("click", handler);
+    </script>
 </body>
 </html>

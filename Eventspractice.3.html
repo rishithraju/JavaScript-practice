@@ -18,15 +18,15 @@
     <button>Clicked!</button>
     <script>
     const btn = document.querySelector("button")
-    function varma() {
+    
+    function varma(){
         console.log(event.target,"Mouse Leave");
     }
 
     function varma1(event){
         console.log(event.target,"Enter!");
-        
     }
-
+    
     function varma2(event){
        console.log(event.target,"Button was clicked!");
     }
@@ -34,6 +34,7 @@
     btn.addEventListener("mouseleave", varma)
     btn.addEventListener("mouseenter",varma1)
     btn.addEventListener("click",varma2)
+
     </script>
 </body>
 </html>
